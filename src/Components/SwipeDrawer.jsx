@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
 import Headerbar from "./Headerbar";
 import Navlist from "./Navlist";
+import { useEffect } from "react";
 
 const drawerWidth = 240;
 
@@ -55,19 +56,37 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function MiniDrawer() {
-  // const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+
+
+  const [open, setOpen] = React.useState( false);
+
+  function handleResize() {
+    if (window.innerWidth < 768) {
+      setOpen(false);
+    } else {
+      setOpen(true);
+    }
+  }
+  useEffect(() => {
+    handleResize();
+  }, []);
 
   const handleDrawer = () => {
     setOpen((prevState) => !prevState);
   };
 
-  // const handleDrawerClose = () => {
-  //   setOpen(false);
-  // };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex",
+
+    width:{
+      xs:400,
+      md:400,
+      xl:500
+
+    }
+
+    }}>
       <Headerbar open={open} handleDrawer={handleDrawer} />
 
       <Drawer variant="permanent" open={open}>

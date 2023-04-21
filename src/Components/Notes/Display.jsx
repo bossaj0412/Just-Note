@@ -13,6 +13,8 @@ const CardContainer = styled(Card)`
   width: 250px;
   margin: 10px;
   minheight: 200px;
+
+  
 `;
 
 const Display = ({ ele }) => {
