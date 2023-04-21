@@ -19,7 +19,7 @@ const Container = styled(Box)`
   flex-direction: column;
   align-items: center;
   margin-top: 20vh;
-//   margin-left: 10vh;
+  margin-right: 120px;
 `;
 
 const EmptyNotes = () => {
@@ -27,7 +27,17 @@ const EmptyNotes = () => {
     const {empty}=useContext(DataContext);
 
   return (
-    <Container>
+    <Container sx={{
+
+      width:{
+        450:600,
+        md:900,
+        // md:400,
+        // lg:1200,
+        // xl:1300
+      }
+
+    }}>
       <Light />
       <Text>Notes you add {empty} here</Text>
     </Container>
