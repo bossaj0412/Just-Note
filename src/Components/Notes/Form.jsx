@@ -9,9 +9,9 @@ import {v4 as uuid} from 'uuid';
 
 const Container = styled(Box)`
   display: flex;
-  margin-right: 250px;
+  margin-right: 150px;
   flex-direction: column;
-  // width: 600px;
+  min-width: 200px;
   box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
   border-color: #e0e0e0;
   // width: xl;
@@ -71,11 +71,11 @@ const Form = () => {
       <Container ref={containerRef}   sx={{
 
         width:{
-          xs:100,
-          sm:300,
-          md:400,
-          lg:500,
-          xl:600
+          sm:600,
+          md:900,
+          // md:400,
+          lg:1200,
+          xl:1300
         }
 
       }}>
