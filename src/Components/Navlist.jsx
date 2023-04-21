@@ -21,21 +21,21 @@ const Navlist = ({ open }) => {
     <div>
       <List>
         {navList.map((text) => (
-          <ListItem key={text.id}>
+          <ListItem key={text.id}   disablePadding sx={{ display: 'block' }}>
 
             <Link to={text.route}  style={{textDecoration:'none', color:'inherit'}}>
             <ListItemButton
               sx={{
                 minHeight: 48,
-                justifyContent: open ? "initial" : "center",
+                justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
               }}
             >
               <ListItemIcon
                 sx={{
                   minWidth: 0,
-                  mr: open ? 3 : "auto",
-                  justifyContent: "center",
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
                 }}
               >
                 {text.icon}

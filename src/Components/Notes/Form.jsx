@@ -9,15 +9,16 @@ import {v4 as uuid} from 'uuid';
 
 const Container = styled(Box)`
   display: flex;
-  margin: auto;
+  margin-right: 250px;
   flex-direction: column;
-  width: 600px;
+  // width: 600px;
   box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
   border-color: #e0e0e0;
-  width: 600px;
+  // width: xl;
   border-radius: 8px;
   min-height: 30px;
   padding: 10px 15px;
+
 `;
 
 const note={
@@ -67,7 +68,17 @@ const Form = () => {
   // console.log(addNote);
   return (
     <ClickAwayListener onClickAway={handleArea}>
-      <Container ref={containerRef}>
+      <Container ref={containerRef}   sx={{
+
+        width:{
+          xs:100,
+          sm:300,
+          md:400,
+          lg:500,
+          xl:600
+        }
+
+      }}>
         {showTextfield && (
           <TextField
             placeholder="Title"
