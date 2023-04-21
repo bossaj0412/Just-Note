@@ -17,7 +17,7 @@ const CardContainer = styled(Card)`
 
 const Display = ({ ele }) => {
   const {
-    ArchiveNotes,
+    
     setArchiveNotes,
     DeleteNotes,
     setDeleteNotes,
