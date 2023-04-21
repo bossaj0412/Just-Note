@@ -24,7 +24,7 @@ const Container = styled(Box)`
 
 const EmptyNotes = () => {
 
-    const {empty,setempty}=useContext(DataContext);
+    const {empty}=useContext(DataContext);
 
   return (
     <Container>

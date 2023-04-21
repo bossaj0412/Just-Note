@@ -22,7 +22,6 @@ const Archive = ({ ele }) => {
     setArchiveNotes,
     DeleteNotes,
     setDeleteNotes,
-    Data,
     setData,
   } = useContext(DataContext);
 

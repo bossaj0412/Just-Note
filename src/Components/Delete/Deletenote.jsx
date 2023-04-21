@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import RestoreOutlinedIcon from '@mui/icons-material/RestoreOutlined';
 import {
-  ArchiveOutlined as ArchiveIcon,
   DeleteOutlined as DeleteIcon
 } from "@mui/icons-material";
 import { useContext } from "react";
@@ -17,8 +16,6 @@ const CardContainer = styled(Card)`
 
 const Delete = ({ ele }) => {
   const {
-    ArchiveNotes,
-    setArchiveNotes,
     DeleteNotes,
     setDeleteNotes,
     Data,
